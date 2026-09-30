@@ -1,0 +1,82 @@
+---
+/**
+ * BaseLayout — layout SEO base untuk semua landing page.
+ * Checklist SEO yang diterapkan (hasil audit ricko.dev, Sep 2026):
+ * - canonical + og:url absolut & self-referencing, konsisten trailing slash
+ * - og:type, og:image absolut + width/height/alt, og:locale + alternate
+ * - twitter tags standar (name=), twitter:image:alt
+ * - meta robots eksplisit, theme-color, apple-touch-icon PNG
+ * - JSON-LD WebPage, title ≤ 60 char, description ≤ 160 char
+ */
+import { SITE_URL, SITE_NAME, DEFAULT_OG_IMAGE, LOCALE, LOCALE_ALTERNATE } from '../consts';
+
+interface Props {
+  title: string; // ≤ 60 karakter
+  description: string; // ≤ 160 karakter
+  slug: string; // mis. "kopi-susu-gula-aren" → canonical SITE_URL/slug/
+  ogImage?: string; // path absolut atau relatif ke /public
+  ogImageAlt?: string;
+  keywords?: string[];
+  noindex?: boolean;
+}
+
+const { title, description, slug, ogImage, ogImageAlt, keywords = [], noindex = false } = Astro.props;
+
+const canonical = `${SITE_URL}/${slug}/`;
+const imageAbs = (ogImage ?? DEFAULT_OG_IMAGE).startsWith('http')
+  ? (ogImage ?? DEFAULT_OG_IMAGE)
+  : `${SITE_URL}${ogImage ?? DEFAULT_OG_IMAGE}`;
+const imageAlt = ogImageAlt ?? `${title} — ${SITE_NAME}`;
+const robots = noindex ? 'noindex, nofollow' : 'index, follow, max-image-preview:large';
+
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'WebPage',
+  name: title,
+  description,
+  url: canonical,
+  inLanguage: 'id',
+  isPartOf: { '@type': 'WebSite', name: SITE_NAME, url: `${SITE_URL}/` },
+};
+---
+
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    {keywords.length > 0 && <meta name="keywords" content={keywords.join(', ')} />}
+    <link rel="canonical" href={canonical} />
+    <meta name="robots" content={robots} />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content={SITE_NAME} />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={canonical} />
+    <meta property="og:image" content={imageAbs} />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content={imageAlt} />
+    <meta property="og:locale" content={LOCALE} />
+    <meta property="og:locale:alternate" content={LOCALE_ALTERNATE} />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={imageAbs} />
+    <meta name="twitter:image:alt" content={imageAlt} />
+
+    <meta name="theme-color" content="#0c0d0e" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+
+    <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
+    <link rel="stylesheet" href="/styles/global.css" />
+  </head>
+  <body>
+    <slot />
+  </body>
+</html>

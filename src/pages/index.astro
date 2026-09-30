@@ -1,0 +1,49 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import pages from '../data/pages.json';
+
+const title = 'The Landing Page — Koleksi landing page harian';
+const description =
+  'Arsip landing page yang digenerate tiap hari dengan Astro: copywriting, gambar, dan optimasi SEO penuh.';
+---
+
+<BaseLayout title={title} description={description} slug="" ogImage="/og.png">
+  <main class="wrap">
+    <header class="hero">
+      <p class="kicker">Dibuat otomatis · tiap jam 3 pagi</p>
+      <h1>The Landing Page</h1>
+      <p class="lede">{description}</p>
+    </header>
+
+    <section>
+      <h2>Arsip ({pages.length})</h2>
+      {
+        pages.length === 0 ? (
+          <p class="empty">Belum ada landing page. Halaman pertama meluncur besok pagi.</p>
+        ) : (
+          <ul class="grid">
+            {pages.map((p) => (
+              <li>
+                <a href={`/${p.slug}/`}>
+                  {p.ogImage && <img src={p.ogImage} alt={p.title} loading="lazy" width="600" height="315" />}
+                  <div class="card-body">
+                    <time>{p.date}</time>
+                    <h3>{p.title}</h3>
+                    <p>{p.description}</p>
+                  </div>
+                </a>
+              </li>
+            ))}
+          </ul>
+        )
+      }
+    </section>
+
+    <footer>
+      <p>
+        Dibuat dengan Astro · SEO checklist: canonical, OG tags, JSON-LD, meta robots ·{' '}
+        <a href="https://ricko.dev">ricko.dev</a>
+      </p>
+    </footer>
+  </main>
+</BaseLayout>
