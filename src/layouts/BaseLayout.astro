@@ -74,6 +74,7 @@ const jsonLd = {
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
 
     <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
+    <slot name="head" />
     <link rel="stylesheet" href="/styles/global.css" />
   </head>
   <body>

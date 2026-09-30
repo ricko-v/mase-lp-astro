@@ -14,98 +14,223 @@ const slug = 'kedai-kopi-susu-gula-aren';
   ogImage="/images/kedai-kopi-susu-gula-aren/og.png"
   ogImageAlt="Segelas kopi susu gula aren Arenku dengan lapisan gula aren, susu, dan espresso"
   keywords={['kopi susu gula aren', 'kopi kekinian', 'kedai kopi', 'kopi takeaway', 'gula aren asli']}
-/>
+>
+  <link slot="head" rel="preconnect" href="https://fonts.googleapis.com" />
+  <link slot="head" rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    slot="head"
+    href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap"
+    rel="stylesheet"
+  />
 
-<section class="lp-hero">
-  <div>
-    <h1>Kopi Susu Gula Aren yang Bikin Nagih Sejak Tegukan Pertama</h1>
-    <p class="lede">
-      Gula aren asli dari petani Jawa, susu segar setiap hari, dan espresso double shot —
-      diracik dalam 3 menit, siap dibawa pulang.
-    </p>
-    <div class="cta-row">
-      <a class="btn btn-primary" href="#pesan">Pesan Sekarang</a>
-      <a class="btn btn-ghost" href="#menu">Lihat Menu</a>
-    </div>
-  </div>
-  <div class="lp-media">
-    <img src="/images/kedai-kopi-susu-gula-aren/hero.png" alt="Segelas kopi susu gula aren Arenku di atas meja kayu" />
-  </div>
-</section>
+  <div class="lp-page">
+    <nav class="lp-nav" aria-label="Navigasi utama">
+      <div class="lp-nav-inner">
+        <a class="lp-brand" href="#">Aren<span>ku</span></a>
+        <div class="lp-nav-links">
+          <a href="#menu">Menu</a>
+          <a href="#cara-pesan">Cara pesan</a>
+          <a href="#faq">FAQ</a>
+          <a class="btn btn-primary btn-sm lp-nav-cta" href="#pesan">Pesan</a>
+        </div>
+      </div>
+    </nav>
 
-<section class="lp-section" id="menu">
-  <h2>Kenapa Arenku Beda</h2>
-  <div class="features">
-    <div class="feature">
-      <h3>Gula Aren Asli 100%</h3>
-      <p>Disadap dari petani di Jawa Tengah dan dimasak perlahan. Tanpa pengawet, tanpa pemanis buatan.</p>
-    </div>
-    <div class="feature">
-      <h3>Espresso Double Shot</h3>
-      <p>Biji arabika specialty grade, disangrai medium-dark. Pahitnya pas, aromanya nendang.</p>
-    </div>
-    <div class="feature">
-      <h3>Susu Segar Harian</h3>
-      <p>Full cream segar yang datang tiap pagi — bukan susu bubuk, bukan krimer.</p>
-    </div>
-    <div class="feature">
-      <h3>Siap dalam 3 Menit</h3>
-      <p>Pesan lewat aplikasi, bayar cashless, ambil tanpa antre. Cocok buat jam istirahat yang mepet.</p>
-    </div>
-    <div class="feature">
-      <h3>Harga Kaki Lima, Rasa Bintang Lima</h3>
-      <p>Mulai Rp18 ribu aja. Topping boba atau cheese foam cuma tambah Rp5 ribu.</p>
-    </div>
-  </div>
-</section>
+    <header class="lp-container lp-hero">
+      <div>
+        <p class="lp-eyebrow">Kedai kopi · Solo</p>
+        <h1>Gula aren dimasak empat jam, kopi diseduh tiga menit.</h1>
+        <p class="lp-lede">
+          Nira aren segar dari petani Jawa Tengah kami masak perlahan sampai jadi karamel
+          pekat, lalu dipadukan dengan double shot arabika dan susu full cream yang datang
+          tiap pagi. Mulai Rp18 ribu.
+        </p>
+        <div class="lp-hero-cta">
+          <a class="btn btn-primary" href="#menu">Lihat Menu</a>
+          <a class="link-arrow" href="#cara-pesan">Cara pesan →</a>
+        </div>
+      </div>
+      <figure>
+        <img
+          src="/images/kedai-kopi-susu-gula-aren/hero.png"
+          alt="Segelas kopi susu gula aren Arenku dengan lapisan gula aren di dasar gelas"
+          fetchpriority="high"
+        />
+        <figcaption>Signature kami: Kopi Susu Aren, gula aren karamel 4 jam.</figcaption>
+      </figure>
+    </header>
 
-<section class="lp-section">
-  <h2>Cara Pesan</h2>
-  <div class="features">
-    <div class="feature">
-      <h3>1. Pilih Menu</h3>
-      <p>Buka aplikasi atau scan QR di gerai, pilih ukuran dan level gula sesukamu.</p>
-    </div>
-    <div class="feature">
-      <h3>2. Bayar Cashless</h3>
-      <p>QRIS, e-wallet, atau transfer bank — struk digital langsung masuk ke HP-mu.</p>
-    </div>
-    <div class="feature">
-      <h3>3. Ambil atau Diantar</h3>
-      <p>Ambil sendiri dalam 3 menit, atau kami antar ke kantormu dengan ojek online.</p>
-    </div>
-  </div>
-</section>
+    <main>
+      <section class="lp-container lp-section" aria-labelledby="kenapa">
+        <div class="lp-section-head">
+          <h2 id="kenapa">Kenapa rasanya beda</h2>
+          <p>Tiga bahan, tanpa jalan pintas. Semua yang masuk gelas bisa kami jelaskan asalnya.</p>
+        </div>
+        <div class="bento">
+          <article class="bento-card featured">
+            <img
+              src="/images/kedai-kopi-susu-gula-aren/og.png"
+              alt="Pusaran espresso yang bercampur dengan susu dan gula aren"
+              loading="lazy"
+            />
+            <div class="bento-body">
+              <h3>Nira asli, dimasak 4 jam</h3>
+              <p>
+                Kami membeli nira segar dari petani aren di Jawa Tengah dan memasaknya
+                sendiri dengan api kecil sampai mengental jadi karamel. Tanpa gula
+                rafinasi, tanpa perasa buatan — manisnya dalam, tidak enek di tenggorokan.
+              </p>
+            </div>
+          </article>
+          <article class="bento-card">
+            <span class="bento-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M17 8h1a4 4 0 1 1 0 8h-1" /><path d="M3 8h14v9a4 4 0 0 1-4 4H7a4 4 0 0 1-4-4Z" /><line x1="6" x2="6" y1="2" y2="4" /><line x1="10" x2="10" y1="2" y2="4" /><line x1="14" x2="14" y1="2" y2="4" /></svg>
+            </span>
+            <h3>Double shot arabika</h3>
+            <p>Biji specialty grade, sangrai medium-dark, diekstrak 1:2. Pahitnya tegas tapi bersih.</p>
+          </article>
+          <article class="bento-card">
+            <span class="bento-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2.7s6.5 7.1 6.5 11.5a6.5 6.5 0 1 1-13 0C5.5 9.8 12 2.7 12 2.7Z" /></svg>
+            </span>
+            <h3>Susu segar, bukan bubuk</h3>
+            <p>Full cream segar diantar tiap pagi. Krimi dan dingin, tanpa menutupi rasa kopinya.</p>
+          </article>
+          <article class="bento-card">
+            <span class="bento-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9" /><path d="M12 7v5l3.5 2" /></svg>
+            </span>
+            <h3>Dari kasir ke tangan: 3 menit</h3>
+            <p>Pesan dan bayar pakai QRIS, kopimu langsung diracik. Antre bukan bagian dari pengalaman.</p>
+          </article>
+        </div>
+      </section>
 
-<section class="lp-section faq">
-  <h2>Pertanyaan Umum</h2>
-  <div class="feature">
-    <h3>Apakah gulanya benar-benar gula aren asli?</h3>
-    <p>Ya. Kami bermitra langsung dengan petani aren di Jawa Tengah. Setiap batch kami uji rasa sebelum dipakai.</p>
-  </div>
-  <div class="feature">
-    <h3>Bisa atur level gula atau ganti susu?</h3>
-    <p>Bisa. Pilih less, normal, atau extra gula. Susu oat atau kedelai tersedia dengan tambahan Rp5 ribu.</p>
-  </div>
-  <div class="feature">
-    <h3>Melayani pesanan untuk acara kantor?</h3>
-    <p>Bisa, minimal 20 cup dengan pemesanan H-1. Gratis antar untuk radius 5 km.</p>
-  </div>
-  <div class="feature">
-    <h3>Jam bukanya kapan?</h3>
-    <p>Setiap hari pukul 07.00–22.00, termasuk akhir pekan dan hari libur nasional.</p>
-  </div>
-  <div class="feature">
-    <h3>Ada promo?</h3>
-    <p>Setiap Jumat: beli 5 gratis 1 untuk semua varian kopi susu. Ikuti Instagram kami untuk promo kilat.</p>
-  </div>
-</section>
+      <section class="lp-container lp-section" id="menu" aria-labelledby="menu-h">
+        <div class="lp-section-head">
+          <h2 id="menu-h">Menu</h2>
+          <p>Harga jujur. Semua racikan memakai gula aren asli yang kami masak sendiri.</p>
+        </div>
+        <div class="menu">
+          <div class="menu-row">
+            <div>
+              <h3>Kopi Susu Aren <span class="tag">Signature</span></h3>
+              <p>Double shot espresso, susu segar, gula aren karamel 4 jam.</p>
+            </div>
+            <span class="menu-price"><small>R</small> 18 <small>·</small> <small>L</small> 23</span>
+          </div>
+          <div class="menu-row">
+            <div>
+              <h3>Aren Latte Panas</h3>
+              <p>Susu panas di-steam, gula aren, single shot. Untuk yang tidak suka es.</p>
+            </div>
+            <span class="menu-price">20</span>
+          </div>
+          <div class="menu-row">
+            <div>
+              <h3>Americano Aren</h3>
+              <p>Espresso dan air dengan sentuhan gula aren. Ringan, menyegarkan.</p>
+            </div>
+            <span class="menu-price"><small>R</small> 16 <small>·</small> <small>L</small> 20</span>
+          </div>
+          <div class="menu-row">
+            <div>
+              <h3>Cokelat Aren</h3>
+              <p>Kakao premium bertemu gula aren karamel. Tanpa kopi.</p>
+            </div>
+            <span class="menu-price">22</span>
+          </div>
+          <div class="menu-row">
+            <div>
+              <h3>Tambahan</h3>
+              <p>Boba aren, cheese foam, atau ganti oat milk.</p>
+            </div>
+            <span class="menu-price"><small>+</small>5</span>
+          </div>
+        </div>
+        <p style="margin-top: 0.9rem; font-size: 0.85rem; color: var(--lp-ink-mute);">Harga dalam ribu rupiah.</p>
+      </section>
 
-<section class="final-cta" id="pesan">
-  <h2>Haus? Pesan Sekarang, Siap dalam 3 Menit.</h2>
-  <p>Klik tombol di bawah, kopimu langsung kami racik.</p>
-  <div class="cta-row">
-    <a class="btn btn-primary" href="#">Pesan via Aplikasi</a>
-    <a class="btn btn-ghost" href="#">Chat WhatsApp</a>
+      <section class="lp-container lp-section" id="cara-pesan" aria-labelledby="cara-h">
+        <div class="lp-section-head">
+          <h2 id="cara-h">Cara pesan</h2>
+          <p>Tiga langkah, tanpa antre.</p>
+        </div>
+        <ol class="steps">
+          <li>
+            <span class="step-num" aria-hidden="true">01</span>
+            <div>
+              <h3>Pilih dan bayar</h3>
+              <p>Scan QR di meja atau pesan dari HP, tentukan ukuran dan level gula, lalu bayar pakai QRIS.</p>
+            </div>
+          </li>
+          <li>
+            <span class="step-num" aria-hidden="true">02</span>
+            <div>
+              <h3>Kami racik</h3>
+              <p>Barista mengekstrak espresso dan mencampurnya dengan gula aren yang sudah dilelehkan. Rata-rata 3 menit.</p>
+            </div>
+          </li>
+          <li>
+            <span class="step-num" aria-hidden="true">03</span>
+            <div>
+              <h3>Ambil atau diantar</h3>
+              <p>Ambil sendiri di konter, atau kami antarkan ke kantormu dalam radius 5 km.</p>
+            </div>
+          </li>
+        </ol>
+      </section>
+
+      <section class="lp-container lp-section" id="faq" aria-labelledby="faq-h">
+        <div class="lp-section-head">
+          <h2 id="faq-h">Sering ditanyakan</h2>
+        </div>
+        <div class="faq-list">
+          <details>
+            <summary>Apakah gulanya benar-benar gula aren asli?</summary>
+            <p>Ya. Kami membeli nira dari petani aren di Jawa Tengah dan memasaknya sendiri di dapur kami. Kalau satu batch gagal, kami buang — tidak kami akali.</p>
+          </details>
+          <details>
+            <summary>Bisa atur manisnya?</summary>
+            <p>Bisa. Pilih less, normal, atau extra saat memesan. Susu oat atau kedelai tersedia dengan tambahan Rp5 ribu.</p>
+          </details>
+          <details>
+            <summary>Menerima pesanan untuk acara?</summary>
+            <p>Ya, minimal 20 cup dengan pemesanan H-1. Gratis antar untuk radius 5 km.</p>
+          </details>
+          <details>
+            <summary>Jam bukanya kapan?</summary>
+            <p>Setiap hari pukul 07.00–22.00, termasuk akhir pekan dan hari libur.</p>
+          </details>
+          <details>
+            <summary>Ada promo?</summary>
+            <p>Setiap Jumat: beli 5 gratis 1 untuk semua varian kopi susu.</p>
+          </details>
+        </div>
+      </section>
+
+      <section class="lp-container" id="pesan" aria-labelledby="pesan-h">
+        <div class="lp-cta-panel">
+          <div>
+            <h2 id="pesan-h">Haus itu darurat kecil. Kami siap.</h2>
+            <p>Datang ke gerai atau pesan dari HP — kopimu diracik begitu pesanan masuk, siap dalam 3 menit.</p>
+          </div>
+          <div class="lp-cta-actions">
+            <a class="btn btn-cream" href="#menu">Lihat Menu</a>
+            <a class="link-arrow" href="#faq">Masih ragu? Baca FAQ →</a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="lp-footer">
+      <div class="lp-container lp-footer-inner">
+        <div>
+          <strong>Arenku</strong> — kopi susu gula aren.<br />
+          Buka setiap hari 07.00–22.00 · Solo, Jawa Tengah
+        </div>
+        <div>© 2026 Arenku. Diseduh dengan sabar.</div>
+      </div>
+    </footer>
   </div>
-</section>
+</BaseLayout>
