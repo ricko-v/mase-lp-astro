@@ -127,6 +127,8 @@ footer a { color: var(--accent); }
   transition: color 140ms var(--lp-ease);
 }
 .lp-nav-links a:hover { color: var(--lp-ink); }
+.lp-nav-links a.btn-primary { color: #fff; }
+.lp-nav-links a.btn-primary:hover { color: #fff; }
 .lp-nav-cta { margin-left: 0.5rem; }
 @media (max-width: 720px) { .lp-nav-links a:not(.btn) { display: none; } }
 
