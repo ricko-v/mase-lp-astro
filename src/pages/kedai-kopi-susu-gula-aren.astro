@@ -1,0 +1,111 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+const title = 'Kopi Susu Gula Aren Kekinian — Arenku';
+const description =
+  'Kopi susu gula aren asli dari petani Jawa, espresso double shot, dan susu segar harian. Mulai Rp18 ribu, siap 3 menit.';
+const slug = 'kedai-kopi-susu-gula-aren';
+---
+
+<BaseLayout
+  title={title}
+  description={description}
+  slug={slug}
+  ogImage="/images/kedai-kopi-susu-gula-aren/og.png"
+  ogImageAlt="Segelas kopi susu gula aren Arenku dengan lapisan gula aren, susu, dan espresso"
+  keywords={['kopi susu gula aren', 'kopi kekinian', 'kedai kopi', 'kopi takeaway', 'gula aren asli']}
+/>
+
+<section class="lp-hero">
+  <div>
+    <h1>Kopi Susu Gula Aren yang Bikin Nagih Sejak Tegukan Pertama</h1>
+    <p class="lede">
+      Gula aren asli dari petani Jawa, susu segar setiap hari, dan espresso double shot —
+      diracik dalam 3 menit, siap dibawa pulang.
+    </p>
+    <div class="cta-row">
+      <a class="btn btn-primary" href="#pesan">Pesan Sekarang</a>
+      <a class="btn btn-ghost" href="#menu">Lihat Menu</a>
+    </div>
+  </div>
+  <div class="lp-media">
+    <img src="/images/kedai-kopi-susu-gula-aren/hero.png" alt="Segelas kopi susu gula aren Arenku di atas meja kayu" />
+  </div>
+</section>
+
+<section class="lp-section" id="menu">
+  <h2>Kenapa Arenku Beda</h2>
+  <div class="features">
+    <div class="feature">
+      <h3>Gula Aren Asli 100%</h3>
+      <p>Disadap dari petani di Jawa Tengah dan dimasak perlahan. Tanpa pengawet, tanpa pemanis buatan.</p>
+    </div>
+    <div class="feature">
+      <h3>Espresso Double Shot</h3>
+      <p>Biji arabika specialty grade, disangrai medium-dark. Pahitnya pas, aromanya nendang.</p>
+    </div>
+    <div class="feature">
+      <h3>Susu Segar Harian</h3>
+      <p>Full cream segar yang datang tiap pagi — bukan susu bubuk, bukan krimer.</p>
+    </div>
+    <div class="feature">
+      <h3>Siap dalam 3 Menit</h3>
+      <p>Pesan lewat aplikasi, bayar cashless, ambil tanpa antre. Cocok buat jam istirahat yang mepet.</p>
+    </div>
+    <div class="feature">
+      <h3>Harga Kaki Lima, Rasa Bintang Lima</h3>
+      <p>Mulai Rp18 ribu aja. Topping boba atau cheese foam cuma tambah Rp5 ribu.</p>
+    </div>
+  </div>
+</section>
+
+<section class="lp-section">
+  <h2>Cara Pesan</h2>
+  <div class="features">
+    <div class="feature">
+      <h3>1. Pilih Menu</h3>
+      <p>Buka aplikasi atau scan QR di gerai, pilih ukuran dan level gula sesukamu.</p>
+    </div>
+    <div class="feature">
+      <h3>2. Bayar Cashless</h3>
+      <p>QRIS, e-wallet, atau transfer bank — struk digital langsung masuk ke HP-mu.</p>
+    </div>
+    <div class="feature">
+      <h3>3. Ambil atau Diantar</h3>
+      <p>Ambil sendiri dalam 3 menit, atau kami antar ke kantormu dengan ojek online.</p>
+    </div>
+  </div>
+</section>
+
+<section class="lp-section faq">
+  <h2>Pertanyaan Umum</h2>
+  <div class="feature">
+    <h3>Apakah gulanya benar-benar gula aren asli?</h3>
+    <p>Ya. Kami bermitra langsung dengan petani aren di Jawa Tengah. Setiap batch kami uji rasa sebelum dipakai.</p>
+  </div>
+  <div class="feature">
+    <h3>Bisa atur level gula atau ganti susu?</h3>
+    <p>Bisa. Pilih less, normal, atau extra gula. Susu oat atau kedelai tersedia dengan tambahan Rp5 ribu.</p>
+  </div>
+  <div class="feature">
+    <h3>Melayani pesanan untuk acara kantor?</h3>
+    <p>Bisa, minimal 20 cup dengan pemesanan H-1. Gratis antar untuk radius 5 km.</p>
+  </div>
+  <div class="feature">
+    <h3>Jam bukanya kapan?</h3>
+    <p>Setiap hari pukul 07.00–22.00, termasuk akhir pekan dan hari libur nasional.</p>
+  </div>
+  <div class="feature">
+    <h3>Ada promo?</h3>
+    <p>Setiap Jumat: beli 5 gratis 1 untuk semua varian kopi susu. Ikuti Instagram kami untuk promo kilat.</p>
+  </div>
+</section>
+
+<section class="final-cta" id="pesan">
+  <h2>Haus? Pesan Sekarang, Siap dalam 3 Menit.</h2>
+  <p>Klik tombol di bawah, kopimu langsung kami racik.</p>
+  <div class="cta-row">
+    <a class="btn btn-primary" href="#">Pesan via Aplikasi</a>
+    <a class="btn btn-ghost" href="#">Chat WhatsApp</a>
+  </div>
+</section>
